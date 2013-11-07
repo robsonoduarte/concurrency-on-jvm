@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>br.com.mystudies</groupId>
-  <artifactId>concurrency-perils</artifactId>
+  <artifactId>perils-concurrency</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
