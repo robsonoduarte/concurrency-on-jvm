@@ -1,7 +1,7 @@
 strategies-concurrency
 ======================
 
-project about strategies for concurrency 
+Project about strategies for concurrency.
 
 > The topics are:
 
