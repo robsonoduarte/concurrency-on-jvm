@@ -1,9 +1,11 @@
 concurrency-perils
 ==================
 
-project about programming concurrency ( perils of concurrency ) 
+Project about perils of concurrency.
 
-    starvation and deadlocks
-    race conditions
+> The topics are:
 
-all studies in this project have with base the Programming Concurrency on the JVM Book.
+    > Starvation and Deadlocks
+    > Race Conditions
+
+________________________________________________ 
