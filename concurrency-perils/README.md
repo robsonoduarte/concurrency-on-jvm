@@ -1,13 +1,9 @@
-strategies-concurrency
-======================
+concurrency-perils
+==================
 
-project about programming concurrency ( strategies for concurrency )
+project about programming concurrency ( perils of concurrency ) 
 
-    division of labor
-    concurrency in IO Apps
-    concurrency in computationally Apps
+    starvation and deadlocks
+    race conditions
 
-* all studies in this project have with base the book:
-   
-    --------------------------------------------
-   > Programming Concurrency on the JVM Book by Venkat Subramaniam.
+all studies in this project have with base the Programming Concurrency on the JVM Book.
