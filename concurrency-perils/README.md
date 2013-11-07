@@ -1,4 +1,4 @@
-concurrency-perils
+perils-concurrency
 ==================
 
 Project about perils of concurrency.
