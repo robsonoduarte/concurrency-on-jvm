@@ -24,7 +24,7 @@ public class StockFileReader implements StockReader{
 			stocks.put(values[0],Integer.valueOf(values[1]));			
 		}
 		
-		return stocks ;
+		return stocks;
 	}
 
 	
@@ -38,5 +38,4 @@ public class StockFileReader implements StockReader{
 		}
 	}
 
-	
 }

@@ -4,6 +4,7 @@ import static java.lang.System.currentTimeMillis;
 import static java.lang.System.out;
 
 import java.io.IOException;
+import java.text.DecimalFormat;
 
 import br.com.mystudies.concurrency.io.NetAssetValue;
 import br.com.mystudies.concurrency.io.StockFileReader;
@@ -16,12 +17,13 @@ public class App {
 	
 		NetAssetValue netAssetValue = new SequentialNetAssetValue();
 		
-		netAssetValue.compute(new StockFileReader().reader());
+		Double total = netAssetValue.compute(new StockFileReader().reader());
+		
+		System.out.println(DecimalFormat.getCurrencyInstance().format(total));
 		
 		printTotalTime(start,currentTimeMillis());
 		
 	}
-
 	
 	
 	private static void printTotalTime(long start, long finish) {
