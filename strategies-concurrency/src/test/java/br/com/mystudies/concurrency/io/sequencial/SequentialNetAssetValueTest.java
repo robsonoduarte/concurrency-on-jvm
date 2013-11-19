@@ -44,4 +44,5 @@ public class SequentialNetAssetValueTest extends BaseNetAssetValueTest {
 		verify(yahooFinance, times(3)).getLastClosePrice(anyString());
 	}
 
+	
 }
