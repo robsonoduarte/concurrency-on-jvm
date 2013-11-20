@@ -35,18 +35,12 @@ public class ConcurrentNetAssetValueTest extends BaseNetAssetValueTest{
 		initMocks(this);
 	}
 	
-	
-/*	stocks.put("AAPL", 2505);
-	stocks.put("AMGN", 3406);
-	stocks.put("AMZN", 9354);*/
-	
-	
-	
+		
 	
 	@Test
 	public void test() throws IOException {
-		when(yahooFinance.getLastClosePrice(anyString())).thenReturn(10.5, 20.4, 30.9);
-		assertThat(concurrentNetAssetValue.compute(getStocks()), equalTo(384823.5));
+		when(yahooFinance.getLastClosePrice(anyString())).thenReturn(10.0, 10.0, 10.0);
+		assertThat(concurrentNetAssetValue.compute(getStocks()), equalTo(152650.0));
 		verify(yahooFinance, times(3)).getLastClosePrice(anyString());
 	}
 

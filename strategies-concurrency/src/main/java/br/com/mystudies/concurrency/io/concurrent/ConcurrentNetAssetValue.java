@@ -26,31 +26,24 @@ public class ConcurrentNetAssetValue implements NetAssetValue {
 	
 	
 	
-	
 	@Override
 	public Double compute(final Map<String, Integer> stocks) throws IOException { // TODO: why need is final ?
 		
 			
-		List<Callable<Double>> temp = new ArrayList<>();
+		List<Callable<Double>> calllables = new ArrayList<>();
 		
 		
 		for (final String ticker : stocks.keySet()) { // TODO: why need is final ?
 			
-			temp.add( new Callable<Double>() {				
+			calllables.add( new Callable<Double>() {				
 				@Override
-				public Double call() throws Exception {
-					 Double d =  stocks.get(ticker) * yahooFinance.getLastClosePrice(ticker);
-					 System.out.println(d);
-					return d; // TODO: why need is final ? 
+				public Double call() throws Exception {					 					 
+					return stocks.get(ticker) * yahooFinance.getLastClosePrice(ticker); // TODO: why need is final ? 
 				}
-			});
-			
+			});		
 		}
-		
-	     List<Future<Double>> temp2 =  tempInvokeAll(temp);
-		
-		
-		return getTempTotal(temp2);
+				
+		return sum(invokeAll(calllables));
 	}
 
 
@@ -60,11 +53,13 @@ public class ConcurrentNetAssetValue implements NetAssetValue {
 
 
 
-	private List<Future<Double>> tempInvokeAll(List<Callable<Double>> temp) {
+	private List<Future<Double>> invokeAll(List<Callable<Double>> callables) {
 		
 		try {
 			ExecutorService executorService = Executors.newFixedThreadPool(getPoolSize());
-			return executorService.invokeAll(temp, 10000, TimeUnit.SECONDS);
+			List<Future<Double>> list = executorService.invokeAll(callables, 10000, TimeUnit.SECONDS);
+			executorService.shutdown();
+			return list;
 		} catch (Exception exception) {
 			// TODO: handle exception
 			return null;
@@ -72,23 +67,23 @@ public class ConcurrentNetAssetValue implements NetAssetValue {
 	}
 
 
+
 	
 	
-	
-	private int getPoolSize() {
+	private int getPoolSize() {		
 		return (int) (Runtime.getRuntime().availableProcessors() / 0.1) ;
 	}
 
 
 
 
-	private Double getTempTotal(List<Future<Double>> temp2) {
+	private Double sum(List<Future<Double>> futures) {
 		
 		try {
 			
 			double total = 0.0;
 			
-			for (Future<Double> future : temp2) {
+			for (Future<Double> future : futures) {
 				total += future.get();
 			}
 			
@@ -99,4 +94,6 @@ public class ConcurrentNetAssetValue implements NetAssetValue {
 			return 0.0;
 		}
 	}
+	
+	
 }
