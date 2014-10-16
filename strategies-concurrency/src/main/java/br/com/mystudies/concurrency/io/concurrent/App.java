@@ -21,12 +21,12 @@ public class App {
 		
 		System.out.println(DecimalFormat.getCurrencyInstance().format(total));
 		
-		printTotalTime(start,currentTimeMillis());
-		
+		printTotalTime(start,currentTimeMillis());	
 	}
 	
 	
 	private static void printTotalTime(long start, long finish) {
 		out.print("Total Time..: " +  ( finish - start) / 1000  + " seconds");
 	}
+	
 }

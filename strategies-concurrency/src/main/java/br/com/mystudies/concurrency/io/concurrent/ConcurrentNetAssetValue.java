@@ -42,7 +42,7 @@ public class ConcurrentNetAssetValue implements NetAssetValue {
 				}
 			});		
 		}
-				
+		
 		return sum(invokeAll(calllables));
 	}
 

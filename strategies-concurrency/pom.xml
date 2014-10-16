@@ -74,6 +74,11 @@
 	    <groupId>com.jramoyo</groupId>
 	    <artifactId>indexed-file-reader</artifactId>
 	    <version>1.0</version>
-	</dependency>   	
+	</dependency>
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-math3</artifactId>
+		<version>3.3</version>
+	</dependency>
    </dependencies>
 </project>
