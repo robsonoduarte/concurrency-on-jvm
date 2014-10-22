@@ -6,14 +6,9 @@ import static org.junit.Assert.assertThat;
 import org.junit.Before;
 import org.junit.Test;
 
-import br.com.mystudies.concurrency.computation.PrimeFinder;
+import br.com.mystudies.concurrency.computation.BasePrimeFinderTest;
 
-public class ConcurrentPrimeFinderTest {
-
-
-	private PrimeFinder primeFinder;
-
-
+public class ConcurrentPrimeFinderTest extends BasePrimeFinderTest{
 
 
 
@@ -27,12 +22,12 @@ public class ConcurrentPrimeFinderTest {
 
 
 
-
 	@Test
 	public void test() {
-		long totalPrimes = primeFinder.countsPrimes(10000000L);
+		long totalPrimes = primeFinder.countsPrimes(numbers);
 		assertThat(totalPrimes, equalTo(664579L));
 	}
+
 
 
 }

@@ -1,7 +1,6 @@
 package br.com.mystudies.concurrency.computation.concurrent;
 
 import static java.util.concurrent.TimeUnit.SECONDS;
-import static java.util.stream.Collectors.toList;
 import static org.apache.commons.collections4.ListUtils.partition;
 import static org.apache.commons.math3.primes.Primes.isPrime;
 
@@ -12,7 +11,6 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.stream.Stream;
 
 import br.com.mystudies.concurrency.computation.PrimeFinder;
 
@@ -20,13 +18,11 @@ public class ConcurrentPrimeFinder implements PrimeFinder {
 
 
 
-
 	@Override
-	public long countsPrimes(long finalNumber) {
-
+	public long countsPrimes(List<Integer> numbers) {
 		List<Callable<Long>> callables = new ArrayList<>();
 
-		for (List<Integer> list : partitionRange(finalNumber)) {
+		for (List<Integer> list : partitionRange(numbers)) {
 
 			callables.add(new Callable<Long>() {
 				@Override
@@ -45,48 +41,22 @@ public class ConcurrentPrimeFinder implements PrimeFinder {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-	private List<List<Integer>> partitionRange(long finalNumber) {
-		return partition(createRange(finalNumber), getNumberOfProcessors());
+	private List<List<Integer>> partitionRange(List<Integer> numbers) {
+		return partition(numbers, getPoolSize() );
 	}
 
 
 
-
-
-	private List<Integer> createRange(long finalNumber) {
-		return Stream.iterate(1, n -> n + 1 )
-				.limit(finalNumber)
-				.collect(toList());
+	private int getPoolSize() {
+		return (int) (Runtime.getRuntime().availableProcessors() / 0.1) ;
 	}
-
-
-
-
-
-
-	private int getNumberOfProcessors() {
-		return Runtime.getRuntime().availableProcessors();
-	}
-
 
 
 
 
 	private List<Future<Long>> invokeAll(List<Callable<Long>> callables) {
 		try {
-			ExecutorService executorService = Executors.newFixedThreadPool(getNumberOfProcessors());
+			ExecutorService executorService = Executors.newFixedThreadPool(getPoolSize());
 			List<Future<Long>> list = executorService.invokeAll(callables, 10000, SECONDS);
 			executorService.shutdown();
 			return list;
@@ -121,6 +91,5 @@ public class ConcurrentPrimeFinder implements PrimeFinder {
 			return 0;
 		}
 	}
-
 
 }
