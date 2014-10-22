@@ -3,6 +3,7 @@ package br.com.mystudies.concurrency.computation.concurrent;
 import static org.hamcrest.Matchers.equalTo;
 import static org.junit.Assert.assertThat;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import br.com.mystudies.concurrency.computation.PrimeFinder;
@@ -18,9 +19,13 @@ public class ConcurrentPrimeFinderTest {
 
 
 
-	public void tearDown() throws Exception {
+	@Before
+	public void setUp() throws Exception {
 		primeFinder = new ConcurrentPrimeFinder();
 	}
+
+
+
 
 
 	@Test
@@ -28,5 +33,6 @@ public class ConcurrentPrimeFinderTest {
 		long totalPrimes = primeFinder.countsPrimes(10000000L);
 		assertThat(totalPrimes, equalTo(664579L));
 	}
+
 
 }
