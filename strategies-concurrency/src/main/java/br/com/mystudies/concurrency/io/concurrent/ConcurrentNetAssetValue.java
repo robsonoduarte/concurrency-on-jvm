@@ -32,12 +32,12 @@ public class ConcurrentNetAssetValue implements NetAssetValue {
 	public Double compute(final Map<String, Integer> stocks) throws IOException { // TODO: why need is final ?
 
 
-		List<Callable<Double>> calllables = new ArrayList<>();
+		List<Callable<Double>> callables = new ArrayList<>();
 
 
 		for (final String ticker : stocks.keySet()) { // TODO: why need is final ?
 
-			calllables.add( new Callable<Double>() {
+			callables.add( new Callable<Double>() {
 				@Override
 				public Double call() throws Exception {
 					return stocks.get(ticker) * yahooFinance.getLastClosePrice(ticker); // TODO: why need is final ?
@@ -45,7 +45,7 @@ public class ConcurrentNetAssetValue implements NetAssetValue {
 			});
 		}
 
-		return sum(invokeAll(calllables));
+		return sum(invokeAll(callables));
 	}
 
 
