@@ -20,9 +20,12 @@ public class ConcurrentPrimeFinder implements PrimeFinder {
 
 	@Override
 	public long countsPrimes(List<Integer> numbers) {
+
 		List<Callable<Long>> callables = new ArrayList<>();
 
-		for (List<Integer> list : partitionRange(numbers)) {
+		List<List<Integer>> range = partitionRange(numbers);
+
+		for (List<Integer> list : range) {
 
 			callables.add(new Callable<Long>() {
 				@Override
@@ -48,7 +51,7 @@ public class ConcurrentPrimeFinder implements PrimeFinder {
 
 
 	private int getPoolSize() {
-		return (int) (Runtime.getRuntime().availableProcessors() / 0.1) ;
+		return (int) (Runtime.getRuntime().availableProcessors() ) ;
 	}
 
 
