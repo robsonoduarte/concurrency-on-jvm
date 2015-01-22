@@ -45,7 +45,7 @@ public class ConcurrentPrimeFinder implements PrimeFinder {
 
 
 	private List<List<Integer>> partitionRange(List<Integer> numbers) {
-		return partition(numbers, getPoolSize() );
+		return partition(numbers, numbers.size() / getPoolSize() );
 	}
 
 
