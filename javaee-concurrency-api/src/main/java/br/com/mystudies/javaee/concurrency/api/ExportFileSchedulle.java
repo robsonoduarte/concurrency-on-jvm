@@ -1,7 +1,7 @@
 package br.com.mystudies.javaee.concurrency.api;
 
 
-public class FileExportSchedulle {
+public class ExportFileSchedulle {
 
 	public ExportFilter exportFilter() {
 		// TODO Auto-generated method stub
