@@ -7,12 +7,12 @@ import org.junit.Test;
 
 public class FileExportSchedulleTest {
 
-	private FileExportSchedulle fileExportSchedulle;
+	private ExportFileSchedulle fileExportSchedulle;
 
 	
 	@Before
 	public void setUp() throws Exception {
-		fileExportSchedulle = new FileExportSchedulle();
+		fileExportSchedulle = new ExportFileSchedulle();
 	}
 
 	

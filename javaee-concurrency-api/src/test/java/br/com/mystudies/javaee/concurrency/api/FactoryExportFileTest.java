@@ -3,20 +3,22 @@ package br.com.mystudies.javaee.concurrency.api;
 import org.junit.Before;
 import org.junit.Test;
 
-public class FileExportTest {
+public class FactoryExportFileTest {
 
-	private ExportFile fileExport;
+
+	private FactoryExportFile factoryExportFile;
 
 
 	@Before
 	public void setUp() throws Exception {
-		fileExport = new ExportFileTXT();
+		factoryExportFile = new FactoryExportFile();
 	}
+
 
 
 	@Test
 	public void test() {
-		FileExportResult fileExportResult = fileExport.export(new ExportFilter());
+		ExportFile exportFile = factoryExportFile.create("Export");
 	}
 
 }
