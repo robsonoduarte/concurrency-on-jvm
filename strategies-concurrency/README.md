@@ -10,7 +10,7 @@ Project about strategies for concurrency.
     > concurrency in computationally Apps
     
 --------------------------------------------------------------------------------------------------
-In this project you can see the big deference of run on App in sequential mode or run in concurrency.
+In this project you can see the big deference of run one App in sequential mode or run in concurrency.
 
 We divide in two category -> IO and Computationally 
 
