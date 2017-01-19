@@ -3,9 +3,8 @@ Programming Concurrency on the JVM
 
 * This Repository contains many projects about programming concurrency on the JVM the topics are:
  
-
-  * [Strategies to Concurrency](https://github.com/robsonoduarte/concurrency-on-jvm/tree/master/strategies-concurrency)
   * [Perils of Concurrency](https://github.com/robsonoduarte/concurrency-on-jvm/tree/master/perils-concurrency#perils-of-concurrency)
+  * [Strategies to Concurrency](https://github.com/robsonoduarte/concurrency-on-jvm/tree/master/strategies-concurrency)
   * [Java EE Concurrency API](https://github.com/robsonoduarte/concurrency-on-jvm/tree/master/javaee-concurrency-api)
   
   
