@@ -1,4 +1,4 @@
-package br.com.mystudies.scalability_thread_safety;
+package br.com.mystudies.scalability.thread.safety;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
