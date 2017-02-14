@@ -21,8 +21,7 @@ public class TotalFileSizeSequencialTest {
 
 	@Test
 	public void test() throws Exception {
-		System.out.println(temp().toURI());
-		long total = totalFileSizeSequencial.getTotalSizeOfFilesInDir(temp());
+		long total = totalFileSizeSequencial.getTotalSizeOfFilesInDir(path());
 		assertEquals(total, 12);
 	}
 
@@ -53,7 +52,7 @@ public class TotalFileSizeSequencialTest {
 
 
 
-	private File temp() throws Exception {
+	private File path() throws Exception {
 		return new File(TotalFileSizeSequencialTest.class.getResource("/dir").toURI());
 	}
 
