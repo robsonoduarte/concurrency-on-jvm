@@ -23,18 +23,18 @@ public class NaivelyConcurrentTotalFileSizeTest {
 	@Test
 	public void test() throws Exception {
 	  long total = naivelyConcurrent.getTotalSizeOfFile(path());
-	  assertEquals(total, 12);
+	  assertEquals(total, 4500);
 	}
 
 
 
 
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
 
 	private File path() throws Exception {
 		return new File(TotalFileSizeSequencialTest.class.getResource("/dir").toURI());
