@@ -2,13 +2,13 @@ package br.com.mystudies.scalability.thread.safety;
 
 import static java.lang.System.nanoTime;
 import static java.util.concurrent.Executors.newFixedThreadPool;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
-import java.util.concurrent.TimeUnit;
 
 public class NaivelyConcurrentTotalFileSize {
 
@@ -20,21 +20,12 @@ public class NaivelyConcurrentTotalFileSize {
 
 	private long getTotalSizeOfFilesInDir(final ExecutorService service, final File file) throws Exception{
 
-		if(file.isFile()) {
-			System.out.println("IS FILE THE SIZE IS -> " + file.length());
-			return file.length();
-		}
+		System.out.println(file.getName());
 
-		if(file.isDirectory()) {
-			System.out.println("IS DIRECOTRY THE NAME IS -> " + file.getName());
-			/*return file.length();*/
-		}
-
-
+		if(file.isFile()) return file.length();
 
 
 		long total = 0;
-
 		final File[] children = file.listFiles();
 
 		if(children != null){
@@ -46,7 +37,7 @@ public class NaivelyConcurrentTotalFileSize {
 			}
 
 			for (Future<Long> ptf : partialTotalFutures){
-				total += ptf.get(1, TimeUnit.NANOSECONDS);
+				total += ptf.get(1, SECONDS);
 			}
 		}
 
