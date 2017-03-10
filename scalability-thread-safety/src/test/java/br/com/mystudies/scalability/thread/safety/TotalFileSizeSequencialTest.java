@@ -22,7 +22,7 @@ public class TotalFileSizeSequencialTest {
 	@Test
 	public void test() throws Exception {
 		long total = totalFileSizeSequencial.getTotalSizeOfFilesInDir(path());
-		assertEquals(total, 12);
+		assertEquals(total, 4500);
 	}
 
 
