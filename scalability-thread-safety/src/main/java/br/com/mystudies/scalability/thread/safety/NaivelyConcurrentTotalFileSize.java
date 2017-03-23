@@ -13,7 +13,7 @@ import java.util.concurrent.Future;
 public class NaivelyConcurrentTotalFileSize {
 
 	public long getTotalSizeOfFile(File file) throws Exception {
-		return getTotalSizeOfFilesInDir(newFixedThreadPool(100), file);
+		return getTotalSizeOfFilesInDir(newFixedThreadPool(200), file);
 	}
 
 
