@@ -35,6 +35,10 @@ public class TotalFileSizeSequencial {
 		System.out.println("Time taken: " + (end - start) / 1.0e9);
 	}
 
+	/*
+	 *  Total Size: 66088184283
+		Time taken: 256.787256693
+	 */
 
 
 }
