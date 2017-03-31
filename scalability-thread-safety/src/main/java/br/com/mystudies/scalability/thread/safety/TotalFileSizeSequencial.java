@@ -9,13 +9,13 @@ public class TotalFileSizeSequencial {
 
 
 
-	public long getTotalSizeOfFilesInDir(File file) throws IOException {
+	public double getTotalSizeOfFilesInDir(File file) throws IOException {
 		System.out.println(file.getName());
 
 		if(file.isFile()) return file.length();
 
 		File[] children = file.listFiles();
-		long total = 0;
+		double total = 0;
 		if(children != null)
 			for (File child : children) {
 				total += getTotalSizeOfFilesInDir(child);
@@ -29,15 +29,15 @@ public class TotalFileSizeSequencial {
 
 	public static void main(String[] args) throws IOException {
 		final long start = nanoTime();
-		final long total = new TotalFileSizeSequencial().getTotalSizeOfFilesInDir(new File("E:/apps/"));
+		final double total = new TotalFileSizeSequencial().getTotalSizeOfFilesInDir(new File("F:"));
 		final long end  = nanoTime();
-		System.out.println("Total Size: " + total);
-		System.out.println("Time taken: " + (end - start) / 1.0e9);
+		System.out.println("Total Size in GB: " + ((( total / 1024 ) / 1024 ) / 1024 )) ;
+		System.out.println("Time taken in seconds: " + (end - start) / 1.0e9) ;
 	}
 
 	/*
-	 *  Total Size: 66088184283
-		Time taken: 256.787256693
+	    Total Size in GB: 70.84752610046417
+		Time taken in seconds: 10.198875326
 	 */
 
 

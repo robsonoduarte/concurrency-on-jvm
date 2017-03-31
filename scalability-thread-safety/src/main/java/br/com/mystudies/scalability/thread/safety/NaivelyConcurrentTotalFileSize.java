@@ -2,7 +2,7 @@ package br.com.mystudies.scalability.thread.safety;
 
 import static java.lang.System.nanoTime;
 import static java.util.concurrent.Executors.newFixedThreadPool;
-import static java.util.concurrent.TimeUnit.SECONDS;
+import static java.util.concurrent.TimeUnit.NANOSECONDS;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -12,32 +12,32 @@ import java.util.concurrent.Future;
 
 public class NaivelyConcurrentTotalFileSize {
 
-	public long getTotalSizeOfFile(File file) throws Exception {
-		return getTotalSizeOfFilesInDir(newFixedThreadPool(200), file);
+	public double getTotalSizeOfFile(File file) throws Exception {
+		return getTotalSizeOfFilesInDir(newFixedThreadPool(100), file);
 	}
 
 
 
-	private long getTotalSizeOfFilesInDir(final ExecutorService service, final File file) throws Exception{
+	private double getTotalSizeOfFilesInDir(final ExecutorService service, final File file) throws Exception{
 
 		System.out.println(file.getName());
 
 		if(file.isFile()) return file.length();
 
 
-		long total = 0;
+		double total = 0;
 		final File[] children = file.listFiles();
 
 		if(children != null){
-			final List<Future<Long>> partialTotalFutures = new ArrayList<>();
+			final List<Future<Double>> partialTotalFutures = new ArrayList<>();
 			for (final File child : children) {
 				partialTotalFutures.add(service.submit(() -> {
 					return getTotalSizeOfFilesInDir(service, child);
 				}));
 			}
 
-			for (Future<Long> ptf : partialTotalFutures){
-				total += ptf.get(1, SECONDS);
+			for (Future<Double> ptf : partialTotalFutures){
+				total += ptf.get(1, NANOSECONDS);
 			}
 		}
 
@@ -50,10 +50,11 @@ public class NaivelyConcurrentTotalFileSize {
 
 	public static void main(String[] args) throws Exception {
 		final long start = nanoTime();
-		final long total = new NaivelyConcurrentTotalFileSize().getTotalSizeOfFile(new File("E:/apps/"));
+		final double total = new NaivelyConcurrentTotalFileSize().getTotalSizeOfFile(new File("F:"));
 		final long end  = nanoTime();
-		System.out.println("Total Size: " + total);
-		System.out.println("Time taken: " + (end - start) / 1.0e9);
+		System.out.println("Total Size in GB: " + ((( total / 1024 ) / 1024 ) / 1024 )) ;
+		System.out.println("Time taken in seconds: " + (end - start) / 1.0e9) ;
+
 	}
 
 

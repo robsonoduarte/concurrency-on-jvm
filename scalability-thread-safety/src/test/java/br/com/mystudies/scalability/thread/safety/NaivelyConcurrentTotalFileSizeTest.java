@@ -22,8 +22,8 @@ public class NaivelyConcurrentTotalFileSizeTest {
 
 	@Test
 	public void test() throws Exception {
-	  long total = naivelyConcurrent.getTotalSizeOfFile(path());
-	  assertEquals(total, 4500);
+	  double total = naivelyConcurrent.getTotalSizeOfFile(path());
+	  assertEquals(total, 4500,0.0);
 	}
 
 
