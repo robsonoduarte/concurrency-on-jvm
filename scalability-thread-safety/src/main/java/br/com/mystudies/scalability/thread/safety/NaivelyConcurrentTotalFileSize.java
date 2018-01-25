@@ -54,5 +54,13 @@ public class NaivelyConcurrentTotalFileSize {
 	}
 
 
+	/*
+	 * Exception in thread "main" java.util.concurrent.ExecutionException: java.util.concurrent.ExecutionException: java.util.concurrent.TimeoutException
+	 * at java.util.concurrent.FutureTask.report(FutureTask.java:122)
+	 * at java.util.concurrent.FutureTask.get(FutureTask.java:206)
+	 * at br.com.mystudies.scalability.thread.safety.NaivelyConcurrentTotalFileSize.getTotalSizeOfFilesInDir(NaivelyConcurrentTotalFileSize.java:37)
+	 * at br.com.mystudies.scalability.thread.safety.NaivelyConcurrentTotalFileSize.getTotalSizeOfFile(NaivelyConcurrentTotalFileSize.java:16)
+	 * 
+	 */
 
 }
