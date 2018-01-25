@@ -1,6 +1,6 @@
-Scalability an Thread Safety
+Scalability and Thread Safety
 ======================
 
 Project about Scalability and Thread Safety, **the topics are**:
 
-* Coordinating Threads => [Sequential]()|[Naively]()|[Concurrent]()
+* Coordinating Threads => [Sequential](https://github.com/robsonoduarte/concurrency-on-jvm/blob/master/scalability-thread-safety/src/main/java/br/com/mystudies/scalability/thread/safety/TotalFileSizeSequencial.java) | [Naively](https://github.com/robsonoduarte/concurrency-on-jvm/blob/master/scalability-thread-safety/src/main/java/br/com/mystudies/scalability/thread/safety/NaivelyConcurrentTotalFileSize.java) | [Concurrent](https://github.com/robsonoduarte/concurrency-on-jvm/blob/master/scalability-thread-safety/src/main/java/br/com/mystudies/scalability/thread/safety/ConcurrentTotalFileSize.java)
