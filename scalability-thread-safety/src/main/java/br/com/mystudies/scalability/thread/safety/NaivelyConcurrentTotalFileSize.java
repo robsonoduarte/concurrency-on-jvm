@@ -2,7 +2,7 @@ package br.com.mystudies.scalability.thread.safety;
 
 import static java.lang.System.nanoTime;
 import static java.util.concurrent.Executors.newFixedThreadPool;
-import static java.util.concurrent.TimeUnit.NANOSECONDS;
+import static java.util.concurrent.TimeUnit.SECONDS;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -20,10 +20,7 @@ public class NaivelyConcurrentTotalFileSize {
 
 	private double getTotalSizeOfFilesInDir(final ExecutorService service, final File file) throws Exception{
 
-		System.out.println(file.getName());
-
 		if(file.isFile()) return file.length();
-
 
 		double total = 0;
 		final File[] children = file.listFiles();
@@ -37,7 +34,7 @@ public class NaivelyConcurrentTotalFileSize {
 			}
 
 			for (Future<Double> ptf : partialTotalFutures){
-				total += ptf.get(1, NANOSECONDS);
+				total += ptf.get(100,SECONDS);
 			}
 		}
 
@@ -54,7 +51,6 @@ public class NaivelyConcurrentTotalFileSize {
 		final long end  = nanoTime();
 		System.out.println("Total Size in GB: " + ((( total / 1024 ) / 1024 ) / 1024 )) ;
 		System.out.println("Time taken in seconds: " + (end - start) / 1.0e9) ;
-
 	}
 
 

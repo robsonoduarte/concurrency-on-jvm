@@ -1,6 +1,6 @@
-Strategies Concurrency
+Scalability an Thread Safety
 ======================
 
-Project about Scalability and Thread Safety
+Project about Scalability and Thread Safety, **the topics are**:
 
-***README IN CONSTRUCTION***
+* Coordinating Threads => [Sequential]()|[Naively]()|[Concurrent]()
