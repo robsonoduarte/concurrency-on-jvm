@@ -5,10 +5,12 @@ Programming Concurrency on the JVM
  
   * [Perils of Concurrency](https://github.com/robsonoduarte/concurrency-on-jvm/tree/master/perils-concurrency#perils-of-concurrency)
   * [Strategies to Concurrency](https://github.com/robsonoduarte/concurrency-on-jvm/tree/master/strategies-concurrency)
+  * [Scalability and Thread Safety](https://github.com/robsonoduarte/concurrency-on-jvm/tree/master/scalability-thread-safety)
   * [Java EE Concurrency API](https://github.com/robsonoduarte/concurrency-on-jvm/tree/master/javaee-concurrency-api)
   
   
+  
  
-#####All projects was developed with based in the book:
+#### All projects was developed with based in the book:
 > [Programming Concurrency on the JVM](https://pragprog.com/book/vspcon/programming-concurrency-on-the-jvm)
 
