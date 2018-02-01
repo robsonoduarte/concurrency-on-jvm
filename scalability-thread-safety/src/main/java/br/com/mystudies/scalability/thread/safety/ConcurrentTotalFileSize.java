@@ -6,7 +6,6 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
@@ -26,12 +25,7 @@ public class ConcurrentTotalFileSize {
 				final List<Future<SubDirectoriesAndSize>> partialResults = new ArrayList<>();
 				for(final File directory: directories){
 					partialResults.add(
-						service.submit(new Callable<SubDirectoriesAndSize>() {
-							@Override
-							public SubDirectoriesAndSize call() throws Exception {
-								return getTotalAndSubDirs(directory);
-							}
-						})
+						service.submit(()-> {return getTotalAndSubDirs(directory);})
 					);
 				}
 
