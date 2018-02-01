@@ -38,29 +38,9 @@ public class TotalFileSizeSequencialTest {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	private File path() throws Exception {
 		return new File(TotalFileSizeSequencialTest.class.getResource("/dir").toURI());
 	}
-
-
-
-
-
-
 
 
 
