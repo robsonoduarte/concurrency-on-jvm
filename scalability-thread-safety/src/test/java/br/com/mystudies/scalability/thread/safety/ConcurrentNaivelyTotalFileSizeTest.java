@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-public class NaivelyConcurrentTotalFileSizeTest extends BaseTest {
+public class ConcurrentNaivelyTotalFileSizeTest extends BaseTest {
 
 
 	private ConcurrentNaivelyTotalFileSize naivelyConcurrent;
