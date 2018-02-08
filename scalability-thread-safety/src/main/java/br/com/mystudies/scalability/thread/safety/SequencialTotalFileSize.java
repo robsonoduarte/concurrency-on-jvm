@@ -7,8 +7,7 @@ import java.io.IOException;
 
 public class SequencialTotalFileSize {
 
-	public double getTotalSizeOfFilesInDir(File file) throws IOException {
-		System.out.println(file.getName());
+	public double getTotalSizeOfFile(File file) throws IOException {
 
 		if(file.isFile()) return file.length();
 
@@ -16,7 +15,7 @@ public class SequencialTotalFileSize {
 		double total = 0;
 		if(children != null)
 			for (File child : children) {
-				total += getTotalSizeOfFilesInDir(child);
+				total += getTotalSizeOfFile(child);
 			}
 		return total;
 	}
@@ -25,7 +24,7 @@ public class SequencialTotalFileSize {
 
 	public static void main(String[] args) throws IOException {
 		final long start = nanoTime();
-		final double total = new SequencialTotalFileSize().getTotalSizeOfFilesInDir(new File("F:"));
+		final double total = new SequencialTotalFileSize().getTotalSizeOfFile(new File("F:"));
 		final long end  = nanoTime();
 		System.out.println("Total Size in GB: " + ((( total / 1024 ) / 1024 ) / 1024 )) ;
 		System.out.println("Time taken in seconds: " + (end - start) / 1.0e9) ;
