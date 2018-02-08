@@ -15,14 +15,12 @@ public class ConcurrentTotalFileSizeWQueue {
 	
 	final private BlockingQueue<Long> fileSizes = new ArrayBlockingQueue<>(500);
 	final private AtomicLong pendingFileVisits = new AtomicLong();
-	private ExecutorService service;
+	final private ExecutorService service = newFixedThreadPool(100);
 	
 	
 	
 	
 	public double getTotalSizeOfFile(final File file) throws InterruptedException {
-		
-		service = newFixedThreadPool(100);
 		try {
 			startExploreDir(file);
 			long totalSize = 0;
@@ -84,5 +82,10 @@ public class ConcurrentTotalFileSizeWQueue {
 		System.out.println("Time Taken: " + (end - start) / 1.0e9);
 	}
 	
+	/*
+	 * Total Size in GB: 82.32213742472231 
+	 * Time Taken: 6.407674982
+	 */
+		
 	
 }

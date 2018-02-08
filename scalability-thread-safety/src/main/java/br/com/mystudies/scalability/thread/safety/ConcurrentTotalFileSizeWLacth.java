@@ -10,7 +10,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 public class ConcurrentTotalFileSizeWLacth {
 
-	private ExecutorService service;
+	final private ExecutorService service = newFixedThreadPool(100);;
 	final private AtomicLong pendingFileVisits = new AtomicLong();
 	final private AtomicLong totalSize = new AtomicLong();
 	final private CountDownLatch latch = new CountDownLatch(1);
@@ -18,8 +18,7 @@ public class ConcurrentTotalFileSizeWLacth {
 	
 	
 	
-	public double getTotalSizeOfFile(File file) throws InterruptedException {		
-		service = newFixedThreadPool(100);
+	public double getTotalSizeOfFile(File file) throws InterruptedException {		 
 		pendingFileVisits.incrementAndGet();
 		try {
 			updateTotalSizeOfFilesInDir(file);
@@ -55,7 +54,6 @@ public class ConcurrentTotalFileSizeWLacth {
 		}
 		
 		totalSize.addAndGet(fileSize);
-		System.out.println( "Total Size in ->" + Thread.currentThread().getName() + "=" +  totalSize);
 		if(pendingFileVisits.decrementAndGet() == 0) latch.countDown();
 	}
 
