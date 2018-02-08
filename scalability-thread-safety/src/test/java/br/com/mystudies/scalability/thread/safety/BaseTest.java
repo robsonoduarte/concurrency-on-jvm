@@ -5,7 +5,7 @@ import java.io.File;
 public abstract class BaseTest {
 
 	protected File path() throws Exception {
-		return new File(TotalFileSizeSequencialTest.class.getResource("/dir").toURI());
+		return new File(BaseTest.class.getResource("/dir").toURI());
 	}
 	
 }
