@@ -8,7 +8,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class ConcurrentTotalFileSizeWLacth {
+public class ConcurrentCountDownLatchTotalFileSize {
 
 	final private ExecutorService service = newFixedThreadPool(100);;
 	final private AtomicLong pendingFileVisits = new AtomicLong();
@@ -65,7 +65,7 @@ public class ConcurrentTotalFileSizeWLacth {
 
 	public static void main(String[] args) throws Exception {		
 		final long start = System.nanoTime();		
-		final double total = new ConcurrentTotalFileSizeWLacth().getTotalSizeOfFile(new File("F:"));
+		final double total = new ConcurrentCountDownLatchTotalFileSize().getTotalSizeOfFile(new File("F:"));
 		final long end = System.nanoTime();
 		System.out.println("Total Size in GB: " + ((( total / 1024 ) / 1024 ) / 1024 )) ;
 		System.out.println("Time Taken: " + (end - start) / 1.0e9);

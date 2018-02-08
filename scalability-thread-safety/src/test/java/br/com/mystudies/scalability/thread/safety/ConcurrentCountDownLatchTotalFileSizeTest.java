@@ -5,15 +5,15 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ConcurrentTotalFileSizeWLacthTest extends BaseTest{
+public class ConcurrentCountDownLatchTotalFileSizeTest extends BaseTest{
 
 
-	private ConcurrentTotalFileSizeWLacth concurrent;
+	private ConcurrentCountDownLatchTotalFileSize concurrent;
 
 
 	@Before
 	public void setUp() throws Exception {
-		concurrent = new ConcurrentTotalFileSizeWLacth();
+		concurrent = new ConcurrentCountDownLatchTotalFileSize();
 	}
 
 
