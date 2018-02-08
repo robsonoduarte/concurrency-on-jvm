@@ -2,12 +2,10 @@ package br.com.mystudies.scalability.thread.safety;
 
 import static org.junit.Assert.assertEquals;
 
-import java.io.File;
-
 import org.junit.Before;
 import org.junit.Test;
 
-public class ConcurrentTotalFileSizeWLacthTest {
+public class ConcurrentTotalFileSizeWLacthTest extends BaseTest{
 
 
 	private ConcurrentTotalFileSizeWLacth concurrent;
@@ -26,16 +24,5 @@ public class ConcurrentTotalFileSizeWLacthTest {
 	}
 
 
-
-
-
-
-
-
-
-
-	private File path() throws Exception {
-		return new File(TotalFileSizeSequencialTest.class.getResource("/dir").toURI());
-	}
 
 }
