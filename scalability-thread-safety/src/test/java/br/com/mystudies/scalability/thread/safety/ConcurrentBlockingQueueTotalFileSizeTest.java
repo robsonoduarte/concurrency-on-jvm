@@ -5,17 +5,17 @@ import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ConcurrentTotalFileSizeWQueueTest extends BaseTest{
+public class ConcurrentBlockingQueueTotalFileSizeTest extends BaseTest{
 
 	
 
-	private ConcurrentTotalFileSizeWQueue concurrent;
+	private ConcurrentBlockingQueueTotalFileSize concurrent;
 
 
 
 	@Before	
 	public void setUp() throws Exception {
-		concurrent = new ConcurrentTotalFileSizeWQueue();
+		concurrent = new ConcurrentBlockingQueueTotalFileSize();
 	}
 
 	

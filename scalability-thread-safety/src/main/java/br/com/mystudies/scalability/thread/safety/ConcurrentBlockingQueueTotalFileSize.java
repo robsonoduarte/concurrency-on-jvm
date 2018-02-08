@@ -9,7 +9,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.atomic.AtomicLong;
 
-public class ConcurrentTotalFileSizeWQueue {
+public class ConcurrentBlockingQueueTotalFileSize {
 
 	
 	
@@ -76,7 +76,7 @@ public class ConcurrentTotalFileSizeWQueue {
 	
 	public static void main(String[] args) throws Exception {		
 		final long start = System.nanoTime();		
-		final double total = new ConcurrentTotalFileSizeWQueue().getTotalSizeOfFile(new File("F:"));
+		final double total = new ConcurrentBlockingQueueTotalFileSize().getTotalSizeOfFile(new File("F:"));
 		final long end = System.nanoTime();
 		System.out.println("Total Size in GB: " + ((( total / 1024 ) / 1024 ) / 1024 )) ;
 		System.out.println("Time Taken: " + (end - start) / 1.0e9);
