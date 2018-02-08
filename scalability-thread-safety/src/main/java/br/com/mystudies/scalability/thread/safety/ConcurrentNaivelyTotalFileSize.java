@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Future;
 
-public class NaivelyConcurrentTotalFileSize {
+public class ConcurrentNaivelyTotalFileSize {
 
 	public double getTotalSizeOfFile(File file) throws Exception {
 		return getTotalSizeOfFilesInDir(newFixedThreadPool(100), file);
@@ -47,7 +47,7 @@ public class NaivelyConcurrentTotalFileSize {
 
 	public static void main(String[] args) throws Exception {
 		final long start = nanoTime();
-		final double total = new NaivelyConcurrentTotalFileSize().getTotalSizeOfFile(new File("F:"));
+		final double total = new ConcurrentNaivelyTotalFileSize().getTotalSizeOfFile(new File("F:"));
 		final long end  = nanoTime();
 		System.out.println("Total Size in GB: " + ((( total / 1024 ) / 1024 ) / 1024 )) ;
 		System.out.println("Time taken in seconds: " + (end - start) / 1.0e9) ;

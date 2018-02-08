@@ -8,12 +8,12 @@ import org.junit.Test;
 public class NaivelyConcurrentTotalFileSizeTest extends BaseTest {
 
 
-	private NaivelyConcurrentTotalFileSize naivelyConcurrent;
+	private ConcurrentNaivelyTotalFileSize naivelyConcurrent;
 
 
 	@Before
 	public void setUp() throws Exception {
-		naivelyConcurrent = new NaivelyConcurrentTotalFileSize();
+		naivelyConcurrent = new ConcurrentNaivelyTotalFileSize();
 	}
 
 
