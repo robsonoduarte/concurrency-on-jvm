@@ -8,6 +8,6 @@ Coordinating Threads
 * [Sequential](https://github.com/robsonoduarte/concurrency-on-jvm/blob/master/scalability-thread-safety/src/main/java/br/com/mystudies/scalability/thread/safety/SequencialTotalFileSize.java) 
 * [Concurrent Naively](https://github.com/robsonoduarte/concurrency-on-jvm/blob/master/scalability-thread-safety/src/main/java/br/com/mystudies/scalability/thread/safety/ConcurrentNaivelyTotalFileSize.java) 
 * [Concurrent](https://github.com/robsonoduarte/concurrency-on-jvm/blob/master/scalability-thread-safety/src/main/java/br/com/mystudies/scalability/thread/safety/ConcurrentTotalFileSize.java)
-* [Concurrent with CountDownLatch](https://github.com/robsonoduarte/concurrency-on-jvm/blob/master/scalability-thread-safety/src/main/java/br/com/mystudies/scalability/thread/safety/ConcurrentTotalFileSizeWLacth.java)
-* [Concurrent with BlockingQueue](https://github.com/robsonoduarte/concurrency-on-jvm/blob/master/scalability-thread-safety/src/main/java/br/com/mystudies/scalability/thread/safety/ConcurrentTotalFileSizeWQueue.java)
+* [Concurrent with CountDownLatch](https://github.com/robsonoduarte/concurrency-on-jvm/blob/master/scalability-thread-safety/src/main/java/br/com/mystudies/scalability/thread/safety/ConcurrentCountDownLatchTotalFileSize.java)
+* [Concurrent with BlockingQueue](https://github.com/robsonoduarte/concurrency-on-jvm/blob/master/scalability-thread-safety/src/main/java/br/com/mystudies/scalability/thread/safety/ConcurrentBlockingQueueTotalFileSize.java)
 
