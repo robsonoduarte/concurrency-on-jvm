@@ -68,5 +68,10 @@ public class ConcurrentForkJoinTotalFileSize {
 		System.out.println("Time Taken: " + (end - start) / 1.0e9);
 	}
 	
+	
+	/*
+	 * Total Size in GB: 82.32213742472231 
+	 * Time Taken: 6.094872131
+	 */
 
 }
