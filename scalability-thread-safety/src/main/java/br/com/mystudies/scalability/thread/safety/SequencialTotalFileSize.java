@@ -5,7 +5,7 @@ import static java.lang.System.nanoTime;
 import java.io.File;
 import java.io.IOException;
 
-public class TotalFileSizeSequencial {
+public class SequencialTotalFileSize {
 
 	public double getTotalSizeOfFilesInDir(File file) throws IOException {
 		System.out.println(file.getName());
@@ -25,7 +25,7 @@ public class TotalFileSizeSequencial {
 
 	public static void main(String[] args) throws IOException {
 		final long start = nanoTime();
-		final double total = new TotalFileSizeSequencial().getTotalSizeOfFilesInDir(new File("F:"));
+		final double total = new SequencialTotalFileSize().getTotalSizeOfFilesInDir(new File("F:"));
 		final long end  = nanoTime();
 		System.out.println("Total Size in GB: " + ((( total / 1024 ) / 1024 ) / 1024 )) ;
 		System.out.println("Time taken in seconds: " + (end - start) / 1.0e9) ;

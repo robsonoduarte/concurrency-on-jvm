@@ -7,12 +7,12 @@ import org.junit.Test;
 
 public class TotalFileSizeSequencialTest extends BaseTest{
 
-	private TotalFileSizeSequencial totalFileSizeSequencial;
+	private SequencialTotalFileSize totalFileSizeSequencial;
 
 
 	@Before
 	public void setUp() throws Exception {
-		totalFileSizeSequencial = new TotalFileSizeSequencial();
+		totalFileSizeSequencial = new SequencialTotalFileSize();
 	}
 
 
