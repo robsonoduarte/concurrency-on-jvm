@@ -7,10 +7,8 @@ import org.junit.Test;
 
 public class ConcurrentBlockingQueueTotalFileSizeTest extends BaseTest{
 
-	
 
 	private ConcurrentBlockingQueueTotalFileSize concurrent;
-
 
 
 	@Before	
@@ -18,7 +16,6 @@ public class ConcurrentBlockingQueueTotalFileSizeTest extends BaseTest{
 		concurrent = new ConcurrentBlockingQueueTotalFileSize();
 	}
 
-	
 
 	@Test
 	public void test() throws Exception {
@@ -26,6 +23,4 @@ public class ConcurrentBlockingQueueTotalFileSizeTest extends BaseTest{
 		assertEquals(4500,total,0.0);
 	}
 	
-	
-
 }
