@@ -11,12 +11,10 @@ public class ConcurrentTotalFileSizeTest extends BaseTest{
 	private ConcurrentTotalFileSize concurrent;
 
 
-
 	@Before
 	public void setUp() throws Exception {
 		concurrent = new ConcurrentTotalFileSize();
 	}
-
 
 
 	@Test
@@ -24,6 +22,5 @@ public class ConcurrentTotalFileSizeTest extends BaseTest{
 	  double total = concurrent.getTotalSizeOfFile(path());
 	  assertEquals(total, 4500,0.0);
 	}
-
 
 }
