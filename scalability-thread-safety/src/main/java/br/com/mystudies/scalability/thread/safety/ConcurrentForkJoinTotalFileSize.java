@@ -18,7 +18,6 @@ public class ConcurrentForkJoinTotalFileSize {
 	
 	
 	
-	
 	private class FileSizeFinder extends RecursiveTask<Long>{
 		
 		private static final long serialVersionUID = -2483394014057670272L;
