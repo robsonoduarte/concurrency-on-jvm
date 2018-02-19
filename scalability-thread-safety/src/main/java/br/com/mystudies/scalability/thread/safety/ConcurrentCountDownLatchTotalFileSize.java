@@ -16,8 +16,6 @@ public class ConcurrentCountDownLatchTotalFileSize {
 	final private CountDownLatch latch = new CountDownLatch(1);
 	
 	
-	
-	
 	public double getTotalSizeOfFile(File file) throws InterruptedException {		 
 		pendingFileVisits.incrementAndGet();
 		try {
@@ -29,8 +27,6 @@ public class ConcurrentCountDownLatchTotalFileSize {
 		}
 	}
 
-	
-	
 	
 	private void updateTotalSizeOfFilesInDir(final File file) {
 		
@@ -60,8 +56,6 @@ public class ConcurrentCountDownLatchTotalFileSize {
 
 
 	
-
-
 
 	public static void main(String[] args) throws Exception {		
 		final long start = System.nanoTime();		
