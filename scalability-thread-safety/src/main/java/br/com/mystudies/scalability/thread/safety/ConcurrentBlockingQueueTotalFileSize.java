@@ -12,12 +12,9 @@ import java.util.concurrent.atomic.AtomicLong;
 public class ConcurrentBlockingQueueTotalFileSize {
 
 	
-	
 	final private BlockingQueue<Long> fileSizes = new ArrayBlockingQueue<>(500);
 	final private AtomicLong pendingFileVisits = new AtomicLong();
 	final private ExecutorService service = newFixedThreadPool(100);
-	
-	
 	
 	
 	public double getTotalSizeOfFile(final File file) throws InterruptedException {
@@ -87,5 +84,4 @@ public class ConcurrentBlockingQueueTotalFileSize {
 	 * Time Taken: 6.407674982
 	 */
 		
-	
 }
