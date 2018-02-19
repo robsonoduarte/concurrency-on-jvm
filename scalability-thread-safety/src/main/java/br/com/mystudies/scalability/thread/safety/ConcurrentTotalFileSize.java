@@ -77,8 +77,7 @@ public class ConcurrentTotalFileSize {
 	}
 
 	
-	public static void main(String[] args) throws Exception {
-		
+	public static void main(String[] args) throws Exception {		
 		final long start = System.nanoTime();		
 		final double total = new ConcurrentTotalFileSize().getTotalSizeOfFile(new File("F:"));
 		final long end = System.nanoTime();
