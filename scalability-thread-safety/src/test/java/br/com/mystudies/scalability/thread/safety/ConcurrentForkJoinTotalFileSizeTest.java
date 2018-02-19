@@ -8,9 +8,7 @@ import org.junit.Test;
 public class ConcurrentForkJoinTotalFileSizeTest extends BaseTest{
 
 	
-
 	private ConcurrentForkJoinTotalFileSize concurrent;
-
 
 
 	@Before	
@@ -27,5 +25,4 @@ public class ConcurrentForkJoinTotalFileSizeTest extends BaseTest{
 	}
 	
 	
-
 }
