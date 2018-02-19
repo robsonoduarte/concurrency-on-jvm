@@ -20,8 +20,6 @@ public class SequencialTotalFileSize {
 		return total;
 	}
 
-
-
 	public static void main(String[] args) throws IOException {
 		final long start = nanoTime();
 		final double total = new SequencialTotalFileSize().getTotalSizeOfFile(new File("F:"));
