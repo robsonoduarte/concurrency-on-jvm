@@ -24,16 +24,4 @@ public class ConcurrentNaivelyTotalFileSizeTest extends BaseTest {
 	  assertEquals(total, 4500,0.0);
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
 }
