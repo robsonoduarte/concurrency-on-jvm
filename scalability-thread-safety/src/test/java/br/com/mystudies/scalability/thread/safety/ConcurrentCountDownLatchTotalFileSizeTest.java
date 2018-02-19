@@ -23,6 +23,4 @@ public class ConcurrentCountDownLatchTotalFileSizeTest extends BaseTest{
 		assertEquals(total, 4500.0, 0.0);
 	}
 
-
-
 }
