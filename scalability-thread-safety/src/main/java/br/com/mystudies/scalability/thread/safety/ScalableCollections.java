@@ -1,11 +1,27 @@
 package br.com.mystudies.scalability.thread.safety;
 
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 
 public class ScalableCollections {
 
 	
 	
+	public static void main(String[] args) {
+		System.out.println("Using Plain vanilla Hashmap");
+		AcessingMap.useMap(new HashMap<>());
+		
+		System.out.println("Using Synchronized HasMap");
+		AcessingMap.useMap(Collections.synchronizedMap(new HashMap<>()));
+		
+		
+		System.out.println("Using Concurrent HasMap");
+		AcessingMap.useMap(new ConcurrentHashMap<>());
+			
+	}
 	
 	
 	
