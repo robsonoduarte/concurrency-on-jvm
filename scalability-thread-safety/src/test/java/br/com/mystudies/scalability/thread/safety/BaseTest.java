@@ -6,6 +6,5 @@ public abstract class BaseTest {
 
 	protected File path() throws Exception {
 		return new File(BaseTest.class.getResource("/dir").toURI());
-	}
-	
+	}	
 }
