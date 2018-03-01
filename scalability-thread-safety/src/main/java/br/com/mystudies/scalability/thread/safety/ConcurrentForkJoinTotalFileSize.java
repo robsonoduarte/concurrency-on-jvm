@@ -17,7 +17,6 @@ public class ConcurrentForkJoinTotalFileSize {
 	}
 	
 	
-	
 	private class FileSizeFinder extends RecursiveTask<Long>{
 		
 		private static final long serialVersionUID = -2483394014057670272L;
@@ -66,7 +65,6 @@ public class ConcurrentForkJoinTotalFileSize {
 		System.out.println("Total Size in GB: " + ((( total / 1024 ) / 1024 ) / 1024 )) ;
 		System.out.println("Time Taken: " + (end - start) / 1.0e9);
 	}
-	
 	
 	/*
 	 * Total Size in GB: 82.32213742472231 
