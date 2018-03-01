@@ -55,8 +55,6 @@ public class ConcurrentCountDownLatchTotalFileSize {
 
 
 
-	
-
 	public static void main(String[] args) throws Exception {		
 		final long start = System.nanoTime();		
 		final double total = new ConcurrentCountDownLatchTotalFileSize().getTotalSizeOfFile(new File("F:"));
@@ -65,7 +63,6 @@ public class ConcurrentCountDownLatchTotalFileSize {
 		System.out.println("Time Taken: " + (end - start) / 1.0e9);
 	}
 	
-
 	/*
 	 * Total Size in GB: 82.32213742472231 
 	 * Time Taken: 5.829283257
