@@ -59,5 +59,4 @@ public class ConcurrentNaivelyTotalFileSize {
 	 * at br.com.mystudies.scalability.thread.safety.NaivelyConcurrentTotalFileSize.getTotalSizeOfFile(NaivelyConcurrentTotalFileSize.java:16)
 	 * 
 	 */
-
 }
