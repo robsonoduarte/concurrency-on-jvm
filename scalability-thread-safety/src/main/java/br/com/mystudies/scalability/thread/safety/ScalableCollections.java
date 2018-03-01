@@ -24,7 +24,6 @@ public class ScalableCollections {
 	}
 	
 	
-	
 	private static class AcessingMap{
 		
 		static void useMap(final Map<String, Integer> scores) {
