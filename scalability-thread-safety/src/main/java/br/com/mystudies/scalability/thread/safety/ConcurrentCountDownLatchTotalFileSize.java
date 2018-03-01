@@ -15,7 +15,6 @@ public class ConcurrentCountDownLatchTotalFileSize {
 	final private AtomicLong totalSize = new AtomicLong();
 	final private CountDownLatch latch = new CountDownLatch(1);
 	
-	
 	public double getTotalSizeOfFile(File file) throws InterruptedException {		 
 		pendingFileVisits.incrementAndGet();
 		try {
