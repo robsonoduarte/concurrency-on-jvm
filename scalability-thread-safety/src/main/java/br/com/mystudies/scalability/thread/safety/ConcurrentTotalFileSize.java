@@ -89,6 +89,5 @@ public class ConcurrentTotalFileSize {
 	/*
 	 * Total Size in GB: 82.32213742472231 
 	 * Time Taken: 6.713654089
-	 */
-	
+	 */	
 }
