@@ -32,5 +32,4 @@ public class SequencialTotalFileSize {
 	 * Total Size in GB: 82.32213742472231 
 	 * Time taken in seconds: 11.426830916
 	 */
-
 }
