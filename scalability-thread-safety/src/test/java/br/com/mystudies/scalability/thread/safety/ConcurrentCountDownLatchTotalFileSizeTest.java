@@ -7,7 +7,6 @@ import org.junit.Test;
 
 public class ConcurrentCountDownLatchTotalFileSizeTest extends BaseTest{
 
-
 	private ConcurrentCountDownLatchTotalFileSize concurrent;
 
 
