@@ -16,6 +16,7 @@ public class ConcurrentNaivelyTotalFileSize {
 		return getTotalSizeOfFilesInDir(newFixedThreadPool(100), file);
 	}
 
+	
 	private double getTotalSizeOfFilesInDir(final ExecutorService service, final File file) throws Exception{
 
 		if(file.isFile()) return file.length();
