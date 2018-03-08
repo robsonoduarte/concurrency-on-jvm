@@ -25,7 +25,6 @@ public class ConcurrentCountDownLatchTotalFileSize {
 			service.shutdown();
 		}
 	}
-
 	
 	private void updateTotalSizeOfFilesInDir(final File file) {
 		
