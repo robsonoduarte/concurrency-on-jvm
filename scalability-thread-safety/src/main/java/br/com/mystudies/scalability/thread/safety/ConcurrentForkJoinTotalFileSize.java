@@ -55,8 +55,6 @@ public class ConcurrentForkJoinTotalFileSize {
 	}
 	
 	
-	
-	
 	public static void main(String[] args) throws Exception {		
 		final long start = System.nanoTime();		
 		final double total = new ConcurrentForkJoinTotalFileSize().getTotalSizeOfFile(new File("F:"));
