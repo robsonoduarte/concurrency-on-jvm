@@ -83,8 +83,7 @@ public class ConcurrentTotalFileSize {
 		System.out.println("Total Size in GB: " + ((( total / 1024 ) / 1024 ) / 1024 )) ;
 		System.out.println("Time Taken: " + (end - start) / 1.0e9);
 	}
-		
-	
+			
 	/*
 	 * Total Size in GB: 82.32213742472231 
 	 * Time Taken: 6.713654089
