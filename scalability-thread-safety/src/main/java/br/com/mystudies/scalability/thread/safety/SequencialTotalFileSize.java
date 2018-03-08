@@ -19,7 +19,6 @@ public class SequencialTotalFileSize {
 			}
 		return total;
 	}
-
 	
 	public static void main(String[] args) throws IOException {
 		final long start = nanoTime();
