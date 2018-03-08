@@ -39,8 +39,6 @@ public class ConcurrentBlockingQueueTotalFileSize {
 	}
 
 
-
-
 	private void exploreDir(final File file) {
 		long fileSize = 0;
 		if(file.isFile()) {
