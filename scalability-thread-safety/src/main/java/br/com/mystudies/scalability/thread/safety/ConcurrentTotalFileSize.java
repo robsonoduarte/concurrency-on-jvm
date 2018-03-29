@@ -15,6 +15,7 @@ public class ConcurrentTotalFileSize {
 
 		final ExecutorService service = newFixedThreadPool(100);
 
+		
 		try{
 			long total = 0;
 			final List<File> directories = new ArrayList<>();
