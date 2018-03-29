@@ -7,6 +7,7 @@ import java.io.IOException;
 
 public class SequencialTotalFileSize {
 
+	
 	public double getTotalSizeOfFile(File file) throws IOException {
 
 		if(file.isFile()) return file.length();
