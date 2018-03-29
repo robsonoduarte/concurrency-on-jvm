@@ -9,7 +9,6 @@ public class ConcurrentCountDownLatchTotalFileSizeTest extends BaseTest{
 
 	private ConcurrentCountDownLatchTotalFileSize concurrent;
 
-
 	@Before
 	public void setUp() throws Exception {
 		concurrent = new ConcurrentCountDownLatchTotalFileSize();
