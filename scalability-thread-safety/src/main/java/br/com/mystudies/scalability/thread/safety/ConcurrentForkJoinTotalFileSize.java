@@ -16,6 +16,7 @@ public class ConcurrentForkJoinTotalFileSize {
 		return forkJoinPool.invoke(new FileSizeFinder(file));
 	}
 	
+	
 	private class FileSizeFinder extends RecursiveTask<Long>{
 		
 		private static final long serialVersionUID = -2483394014057670272L;
