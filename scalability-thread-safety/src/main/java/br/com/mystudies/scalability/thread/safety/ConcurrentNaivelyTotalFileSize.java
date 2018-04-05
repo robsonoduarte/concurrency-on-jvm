@@ -17,7 +17,6 @@ public class ConcurrentNaivelyTotalFileSize {
 	}
 
 	
-	
 	private double getTotalSizeOfFilesInDir(final ExecutorService service, final File file) throws Exception{
 
 		if(file.isFile()) return file.length();
