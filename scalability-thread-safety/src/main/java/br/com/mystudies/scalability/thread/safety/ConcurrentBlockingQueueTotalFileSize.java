@@ -78,5 +78,4 @@ public class ConcurrentBlockingQueueTotalFileSize {
 	 * Total Size in GB: 82.32213742472231 
 	 * Time Taken: 6.407674982
 	 */
-		
 }
