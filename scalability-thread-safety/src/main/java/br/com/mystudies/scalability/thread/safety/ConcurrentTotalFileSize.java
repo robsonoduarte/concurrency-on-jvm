@@ -14,7 +14,6 @@ public class ConcurrentTotalFileSize {
 	public double getTotalSizeOfFile(File path) throws Exception{
 
 		final ExecutorService service = newFixedThreadPool(100);
-
 		
 		try{
 			long total = 0;
