@@ -65,6 +65,5 @@ public class ConcurrentCountDownLatchTotalFileSize {
 	/*
 	 * Total Size in GB: 82.32213742472231 
 	 * Time Taken: 5.829283257
-	 */
-	
+	 */	
 }
