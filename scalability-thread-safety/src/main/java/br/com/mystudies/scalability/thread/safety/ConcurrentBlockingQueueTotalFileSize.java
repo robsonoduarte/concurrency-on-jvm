@@ -14,8 +14,7 @@ public class ConcurrentBlockingQueueTotalFileSize {
 	final private BlockingQueue<Long> fileSizes = new ArrayBlockingQueue<>(500);
 	final private AtomicLong pendingFileVisits = new AtomicLong();
 	final private ExecutorService service = newFixedThreadPool(100);
-	
-	
+		
 	public double getTotalSizeOfFile(final File file) throws InterruptedException {
 		try {
 			startExploreDir(file);
