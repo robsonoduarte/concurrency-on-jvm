@@ -8,6 +8,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ScalableCollections {
 
+	
 	public static void main(String[] args) {
 		System.out.println("Using Plain vanilla Hashmap");
 		AcessingMap.useMap(new HashMap<>());
