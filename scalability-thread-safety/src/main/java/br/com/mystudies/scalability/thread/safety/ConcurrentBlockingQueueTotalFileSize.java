@@ -29,7 +29,6 @@ public class ConcurrentBlockingQueueTotalFileSize {
 			service.shutdown();
 		}
 	}
-
 	
 	private void startExploreDir(final File file) {
 		pendingFileVisits.incrementAndGet();
