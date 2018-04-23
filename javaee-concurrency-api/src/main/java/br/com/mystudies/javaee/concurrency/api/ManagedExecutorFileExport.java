@@ -11,17 +11,12 @@ import javax.enterprise.concurrent.ManagedExecutorService;
 
 public class ManagedExecutorFileExport {
 
-
 	private ManagedExecutorService managedExecutorService;
-
-
-
 	private FactoryExportFile factoryExportFile;
 
 
 
 	public void execute(ExportFileSchedulle exportFileSchedulle) {
-
 
 		List<ExportFile> exports  = new ArrayList<>();
 
@@ -30,22 +25,15 @@ public class ManagedExecutorFileExport {
 			.map(t -> factoryExportFile.create(t))
 			.forEach(ef -> exports.add(ef));
 
-
-
-
 		List<Callable<FileExportResult>> result = new ArrayList<>();
 
 		exports.stream()
 			.map(ex -> callable(ex,exportFileSchedulle.exportFilter()))
 			.forEach(c -> result.add(c));
 
-
-
 		try {
 
-
 			List<Future<FileExportResult>> all = managedExecutorService.invokeAll(result);
-
 
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
