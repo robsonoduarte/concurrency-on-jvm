@@ -15,7 +15,6 @@ import org.mockito.Mock;
 
 public class ManagedExecutorFileExportTest {
 
-
 	@InjectMocks
 	private ManagedExecutorFileExport managedExecutorFileExport;
 
@@ -48,7 +47,5 @@ public class ManagedExecutorFileExportTest {
 		managedExecutorFileExport.execute(new ExportFileSchedulle());
 		verify(managedExecutorService).invokeAll(any());
 	}
-
-
 
 }
