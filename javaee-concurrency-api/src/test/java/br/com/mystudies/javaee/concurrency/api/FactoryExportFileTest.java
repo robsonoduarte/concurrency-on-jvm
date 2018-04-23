@@ -5,16 +5,12 @@ import org.junit.Test;
 
 public class FactoryExportFileTest {
 
-
 	private FactoryExportFile factoryExportFile;
-
 
 	@Before
 	public void setUp() throws Exception {
 		factoryExportFile = new FactoryExportFile();
 	}
-
-
 
 	@Test
 	public void test() {
